@@ -12,6 +12,8 @@ jobs:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
     - name: Use gcloud CLI
-      # run: gcloud workflows deploy myFirstWorkflow --location=us-central1 --source=myFirstWorkflow.yaml --project ${{ secrets.GCP_PROJECT_ID }} --service-account=my-wf-service-account-5@serverless-com-demo.iam.gserviceaccount.com
+      run: gcloud workflows deploy myFirstWorkflow --location=us-central1 --source=myFirstWorkflow.yaml --project ${{ secrets.GCP_PROJECT_ID }} --service-account=my-wf-service-account-11@serverless-com-demo.iam.gserviceaccount.com
       # - name: Use gcloud CLI
-      run: gcloud info
+      # run: gcloud info
+    # - name: Activate SA
+    #   run: gcloud auth activate-service-account
