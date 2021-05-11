@@ -5,6 +5,7 @@ jobs:
     name: Deploy Cloud Workflow
     runs-on: ubuntu-18.04
     steps:
+    - uses: actions/checkout@v2
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@master
       with:
@@ -14,6 +15,7 @@ jobs:
     - name: ls
       run: ls; echo $PWD;
     - name: Use gcloud CLI
+      working-directory: .
       run: gcloud workflows deploy myFirstWorkflow --location=us-central1 --source=myFirstWorkflow.yaml --project ${{ secrets.GCP_PROJECT_ID }} --service-account=my-wf-service-account-11@serverless-com-demo.iam.gserviceaccount.com
       # - name: Use gcloud CLI
       # run: gcloud info
