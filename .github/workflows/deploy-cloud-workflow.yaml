@@ -12,7 +12,4 @@ jobs:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
     - name: Use gcloud CLI
-      run: >
-        gcloud workflows deploy myFirstWorkflow \
-        --location=us-central1 \
-        --source=myFirstWorkflow.yaml
+      run: gcloud workflows deploy myFirstWorkflow --location=us-central1 --source=myFirstWorkflow.yaml
