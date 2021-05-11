@@ -15,7 +15,7 @@ PROJECT=$(gcloud config get-value project)
 gh secret set GCP_PROJECT_ID -b $PROJECT
 
 # Create service account
-SERVICE_ACCOUNT=my-wf-service-account-2
+SERVICE_ACCOUNT=my-wf-service-account-3
 gcloud iam service-accounts create $SERVICE_ACCOUNT
 gcloud projects add-iam-policy-binding $PROJECT \
 --member "serviceAccount:$SERVICE_ACCOUNT@$PROJECT.iam.gserviceaccount.com" \
