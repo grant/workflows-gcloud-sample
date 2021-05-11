@@ -1,4 +1,4 @@
-name: deploy cloud workflow
+name: Deploy cloud workflow
 on: [push]
 jobs:
   deploy:
