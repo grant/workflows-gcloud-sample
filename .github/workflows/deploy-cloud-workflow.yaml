@@ -16,7 +16,7 @@ jobs:
       run: ls; echo $PWD;
     - name: Use gcloud CLI
       working-directory: .
-      run: >-
+      run: |
         gcloud workflows deploy fromgithub2 \
         --location=us-central1 \
         --source=myFirstWorkflow.yaml \
