@@ -12,10 +12,7 @@ jobs:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
-    - name: ls
-      run: ls; echo $PWD;
     - name: Use gcloud CLI
-      working-directory: .
       run: |
         gcloud workflows deploy fromgithub2 \
         --location=us-central1 \
