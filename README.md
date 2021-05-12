@@ -12,14 +12,11 @@ PROJECT=$(gcloud config get-value project)
 gh secret set GCP_PROJECT_ID -b $PROJECT
 
 # Create service account
-SERVICE_ACCOUNT=my-wf-service-account-13
+SERVICE_ACCOUNT=my-wf-service-account-14
 gcloud iam service-accounts create $SERVICE_ACCOUNT
-gcloud projects add-iam-policy-binding $PROJECT \
---member "serviceAccount:$SERVICE_ACCOUNT@$PROJECT.iam.gserviceaccount.com" \
---role "roles/workflows.editor"
 # gcloud projects add-iam-policy-binding $PROJECT \
 # --member "serviceAccount:$SERVICE_ACCOUNT@$PROJECT.iam.gserviceaccount.com" \
-# --role "roles/workflows.viewer"
+# --role "roles/workflows.editor"
 gcloud projects add-iam-policy-binding $PROJECT \
 --member "serviceAccount:$SERVICE_ACCOUNT@$PROJECT.iam.gserviceaccount.com" \
 --role "roles/iam.serviceAccountUser"
