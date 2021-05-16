@@ -19,6 +19,6 @@ jobs:
       run: |
         gcloud workflows deploy fromgithub3 \
         --location=us-central1 \
-        --source=myFirstWorkflow.yaml \
+        --source=myFirstWorkflow.workflows.yaml \
         --project ${{ secrets.GCP_PROJECT_ID }} \
         --service-account=my-wf-service-account@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com
