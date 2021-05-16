@@ -34,7 +34,7 @@ gh secret set GCP_SA_KEY < sa.json
 rm sa.json
 ```
 
-Essentially:
+Essentially, the following:
 
 ```
 gh secret set GCP_PROJECT_ID
