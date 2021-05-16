@@ -2,7 +2,11 @@
 
 Sets up CD for Cloud Workflows.
 
-https://github.com/google-github-actions/setup-gcloud
+- gcloud
+- Cloud Workflows
+- Service Account
+- GitHub Actions
+  - https://github.com/google-github-actions/setup-gcloud
 
 ## Setup
 
