@@ -4,7 +4,7 @@ Sets up CD for Cloud Workflows. Uses the following tech:
 
 - gcloud
 - Cloud Workflows
-- Service Account
+- A service account
 - GitHub Actions
   - https://github.com/google-github-actions/setup-gcloud
 
