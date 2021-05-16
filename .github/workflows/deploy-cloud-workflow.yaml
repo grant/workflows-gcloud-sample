@@ -1,5 +1,8 @@
 name: Deploy Cloud Workflow
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   deploy:
     name: Deploy Cloud Workflow
@@ -18,4 +21,4 @@ jobs:
         --location=us-central1 \
         --source=myFirstWorkflow.yaml \
         --project ${{ secrets.GCP_PROJECT_ID }} \
-        --service-account=my-wf-service-account-11@serverless-com-demo.iam.gserviceaccount.com
+        --service-account=my-wf-service-account@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com
