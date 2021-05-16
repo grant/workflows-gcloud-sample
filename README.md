@@ -1,6 +1,6 @@
 # workflows-gcloud-sample
 
-Sets up CD for Cloud Workflows. Uses the following tech:
+Sets up CD for Cloud Workflows. Uses tech:
 
 - gcloud
 - Cloud Workflows
