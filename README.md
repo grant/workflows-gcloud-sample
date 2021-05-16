@@ -1,5 +1,7 @@
 # workflows-gcloud-sample
 
+Sets up CD for Cloud Workflows
+
 https://github.com/google-github-actions/setup-gcloud
 
 ## Setup
