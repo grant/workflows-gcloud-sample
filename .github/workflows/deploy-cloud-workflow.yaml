@@ -21,4 +21,5 @@ jobs:
         --location=us-central1 \
         --source=myFirstWorkflow.workflows.yaml \
         --project ${{ secrets.GCP_PROJECT_ID }} \
+        --labels=COMMIT_SHA=${{github.sha}} \
         --service-account=my-wf-service-account@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com
